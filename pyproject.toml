@@ -1,6 +1,6 @@
 [project]
 name = "pachifast-metrics"
-version = "0.1.0"
+version = "0.1.1"
 description = "Prometheus metrics endpoint for pachifast projects: request count, latency and requests in progress."
 readme = "README.md"
 license = "MIT"
@@ -24,7 +24,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "pachifast>=0.15.0,<0.16.0",
+    "pachifast>=0.16.0,<0.17.0",
     "prometheus-client>=0.20.0,<1.0.0",
 ]
 
