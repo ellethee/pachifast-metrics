@@ -1,0 +1,66 @@
+[project]
+name = "pachifast-metrics"
+version = "0.1.0"
+description = "Prometheus metrics endpoint for pachifast projects: request count, latency and requests in progress."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "ilPachi" }]
+maintainers = [{ name = "ilPachi" }]
+requires-python = ">=3.11"
+keywords = ["pachifast", "fastapi", "prometheus", "metrics", "monitoring"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Web Environment",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Monitoring",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pachifast>=0.15.0,<0.16.0",
+    "prometheus-client>=0.20.0,<1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ellethee/pachifast-metrics"
+Documentation = "https://pachifast.ilpachi.it/guides/extending/"
+Repository = "https://github.com/ellethee/pachifast-metrics"
+Issues = "https://github.com/ellethee/pachifast-metrics/issues"
+Changelog = "https://github.com/ellethee/pachifast-metrics/blob/main/CHANGELOG.md"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.27.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pachifast_metrics"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/LICENSE", "/CHANGELOG.md"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "UP042"]
