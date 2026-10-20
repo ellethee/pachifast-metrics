@@ -97,7 +97,7 @@ def test_the_endpoint_can_be_switched_off(client: TestClient, monkeypatch: pytes
 
 
 def test_the_module_declares_the_pachifast_versions_it_needs() -> None:
-    assert metrics_module.requires_pachifast == ">=0.16.0,<0.17.0"
+    assert metrics_module.requires_pachifast == ">=0.17.0,<0.18.0"
     assert metrics_module.setup_hooks == ("pachifast_metrics.middleware:install",)
 
 
