@@ -7,5 +7,5 @@ module = AppModule(
     kind="common",
     router_modules=("pachifast_metrics.root",),
     setup_hooks=("pachifast_metrics.middleware:install",),
-    requires_pachifast=">=0.18.0,<0.19.0",
+    requires_pachifast=">=0.19.0,<0.20.0",
 )
