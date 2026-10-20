@@ -2,6 +2,12 @@
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). While the major version is 0, a minor release may break; each release works with one minor of pachifast.
 
+## [0.1.3] - 2026-10-20
+
+### Changed
+
+- Works with pachifast `>=0.18,<0.19` (`requires_pachifast`).
+
 ## [0.1.2] - 2026-10-20
 
 ### Changed
